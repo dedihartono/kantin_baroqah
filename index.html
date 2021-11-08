@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kantin Baroqah</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="main">
+        <div class="title">
+          <h1>KANTIN BAROQAH</h1>
+          <p>Jl. Soekarno-Hatta No. 211 Bandung 40124</p>
+        </div>
+        <table id="table-order" class="table-custom">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Jenis Pesanan</th>
+              <th>Harga</th>
+              <th class="text-center">Ceklis</th>
+              <th>Quantity</th>
+              <th>Jumlah</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>BURKER KING</td>
+              <td id="price_1">Rp. 25.000</td>
+              <td class="text-center">
+                <input
+                  id="check_1"
+                  onchange="onChange(this, 'price_1', 'qty_1', 'jumlah_1')"
+                  type="checkbox"
+                />
+              </td>
+              <td>
+                <input
+                  onchange="onChangeInput(this, 'price_1', 'qty_1', 'jumlah_1', 'check_1')"
+                  id="qty_1"
+                  type="number"
+                />
+              </td>
+              <td><input id="jumlah_1" type="number" readonly /></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>STEAK TENDERLOIN</td>
+              <td id="price_2">Rp. 45.000</td>
+              <td class="text-center">
+                <input
+                  id="check_2"
+                  onchange="onChange(this, 'price_2', 'qty_2', 'jumlah_2')"
+                  type="checkbox"
+                />
+              </td>
+              <td>
+                <input
+                  onchange="onChangeInput(this, 'price_2', 'qty_2', 'jumlah_2', 'check_2')"
+                  id="qty_2"
+                  type="number"
+                />
+              </td>
+              <td><input id="jumlah_2" type="number" readonly /></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>BURGER SMALL</td>
+              <td id="price_3">Rp. 18.000</td>
+              <td class="text-center">
+                <input
+                  id="check_3"
+                  onchange="onChange(this, 'price_3', 'qty_3', 'jumlah_3')"
+                  type="checkbox"
+                />
+              </td>
+              <td>
+                <input
+                  onchange="onChangeInput(this, 'price_3', 'qty_3', 'jumlah_3', 'check_3')"
+                  id="qty_3"
+                  type="number"
+                />
+              </td>
+              <td><input id="jumlah_3" type="number" readonly /></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>STEAK SIRLOIN</td>
+              <td id="price_4">Rp. 35.000</td>
+              <td class="text-center">
+                <input
+                  id="check_4"
+                  onchange="onChange(this, 'price_4', 'qty_4', 'jumlah_4')"
+                  type="checkbox"
+                />
+              </td>
+              <td>
+                <input
+                  onchange="onChangeInput(this, 'price_4', 'qty_4', 'jumlah_4', 'check_4')"
+                  id="qty_4"
+                  type="number"
+                />
+              </td>
+              <td><input id="jumlah_4" type="number" readonly /></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td id="total_bayar" colspan="5"><i>Total Bayar Rp.</i></td>
+              <td><input id="total" type="number" readonly /></td>
+            </tr>
+          </tfoot>
+        </table>
+        <div class="button-action">
+          <button id="hitung">Hitung</button>
+          <button id="reset">Reset</button>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
